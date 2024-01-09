@@ -1,0 +1,102 @@
+.home-container {
+  position: relative;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-container .logo {
+  position: inherit;
+  height: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.home-container .logo .hover-show {
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.home-container img {
+  position: absolute;
+  height: 300px;
+  border-radius: 50%;
+  border: 3px solid var(--pulse-blue);
+  box-shadow:0 0 0.1em var(--pulse-blue-shadow), 0 0 0.1em var(--pulse-blue-shadow),0 0 
+  0.1em var(--pulse-blue-shadow);
+  opacity: 0;
+}
+
+.home-container .logo .circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: transparent;
+  background: rgba(0, 0, 0, 0.200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+@media screen and (max-width: 650px){
+  .home-container{ padding: 0 }
+  .home-container .logo .hover-show.active .circle { display: none }
+}
+
+.home-container .logo .hover-show.active .circle { 
+  opacity: 1; 
+  font-size: 4rem;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  padding: 10px;
+}
+
+.home-container .logo .hover-show.active .circle:nth-child(1) {
+  color: lightblue;
+  transform: translateY(-210%);
+}
+
+.home-container .logo .hover-show.active .circle:nth-child(2) {
+  transform: translateX(150%) translateY(-150%);
+  color: green;
+}
+
+.home-container .logo .hover-show.active .circle:nth-child(3) {
+  transform: translateX(210%);
+  color: yellow;
+}
+
+.home-container .logo .hover-show.active .circle:nth-child(4) {
+  transform: translateX(150%) translateY(150%);
+  color: var(--secundary-color);
+}
+
+.home-container .logo .hover-show.active .circle:nth-child(5) {
+  transform: translateY(210%);
+  color: #a20912;
+}
+
+.home-container .logo .hover-show.active .circle:nth-child(6) {
+  transform: translateX(-150%) translateY(150%);
+  color: #42b883;
+}
+
+.home-container .logo .hover-show.active .circle:nth-child(7) {
+  transform: translateX(-210%);
+  color: #dd0031;
+}
+
+.home-container .logo .hover-show.active .circle:nth-child(8) {
+  transform: translateX(-150%) translateY(-150%);
+  color: var(--secundary-color);
+}

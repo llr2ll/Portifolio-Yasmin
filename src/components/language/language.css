@@ -1,0 +1,37 @@
+.language-switch{
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    padding: 1%;
+    background: var(--blur-bg);
+    width: max-content;
+    padding: 0.7rem 1.7rem;
+    z-index: 2;
+    display: flex;
+    gap: 0.8rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(100px);
+    opacity: 0;
+    animation: fade-in 15s ease 1 0.5s forwards;
+    color: var(--main-color);
+}
+
+.language-switch > div { display: flex }
+
+.language-switch > div:hover { transform: scale(1.2); cursor: pointer }
+
+.language-switch > div > img { height: 16px; margin-right: 10px }
+
+.language-switch > div > p { font-weight: 800 }
+
+@media screen and (max-width: 450px) {
+    .language-switch{
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 15px;
+        gap: 0.5rem;
+    }
+
+    .language-switch > div { justify-content: flex-start; width: 100% }
+}

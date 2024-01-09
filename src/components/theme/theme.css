@@ -1,0 +1,69 @@
+.theme-switch{
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  padding: 1%;
+  background: var(--blur-bg);
+  width: max-content;
+  padding: 0.7rem 1.7rem;
+  z-index: 2;
+  display: flex;
+  gap: 0.8rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(100px);
+  opacity: 0;
+  animation: fade-in 15s ease 1 0.5s forwards;
+  color: white
+}
+
+.theme-icon:hover { cursor: pointer; scale: 1.2 }
+
+.fade { animation: fade-in 20s ease 1 3s forwards; }
+
+.fade-out { animation: fade-out 12s ease 1 forwards; }
+
+.showspin { animation: showspin 10s linear 1s infinite }
+
+.pulse-border { animation: pulse-border 10s ease infinite }
+
+.pulse-border-profile { animation: fade-in 20s ease 1 3s forwards, pulse-border 10s ease infinite }
+
+@keyframes fade-in { to { opacity: 1 } }
+
+@keyframes fade-out { 
+    from { opacity: 0; transform: translate(0) }
+    to { transform: translate(100); opacity: 1 }
+}
+  
+@keyframes showspin { to { transform: rotate(360deg) } }
+
+@keyframes pulse-border {
+  0% {
+    border-color: var(--pulse-blue);
+    box-shadow: 0 0 0.1em var(--pulse-blue-shadow), 0 0 0.1em var(--pulse-blue-shadow), 0 0 0.1em var(--pulse-blue-shadow);
+  }
+  50% {
+    border-color: var(--pulse-purple);
+    box-shadow: 0 0 0.1em var(--pulse-purple-shadow), 0 0 0.1em rgb(233, 233, 233), 0 0 0.1em var(--pulse-purple-shadow);
+  }
+  100% {
+    border-color: var(--pulse-blue);
+    box-shadow: 0 0 0.1em var(--pulse-blue-shadow), 0 0 0.1em var(--pulse-blue-shadow), 0 0 0.1em var(--pulse-blue-shadow);
+  }
+}
+
+:root {
+  --main-bg-color: #02021a;
+  --main-color: white;
+  --secundary-color: rgb(0, 255, 255);
+  --tertiary-color: rgb(234, 0, 255);
+  --pulse-blue: rgb(82, 188, 250);
+  --pulse-blue-shadow: rgb(108, 161, 197);
+  --pulse-purple: rgb(234, 0, 255);
+  --pulse-purple-shadow: rgb(183, 0, 255);
+  --blur-bg:  rgba (0 0 0 0.3);
+  --card-bg: rgba(0, 0, 0, 0.622);
+  --card-color: white;
+  --card-hover-bg: rgba(255, 255, 255, 0.096);
+  --h1-margin: 30px 0;
+}

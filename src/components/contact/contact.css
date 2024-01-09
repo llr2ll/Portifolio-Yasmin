@@ -1,0 +1,36 @@
+.contact-container {
+  padding: 5%;
+  opacity: 0;
+  text-align: center;
+}
+.contact-container h1 {
+  margin: var(--h1-margin);
+  font-size: 35px;
+  font-weight: 800;
+  color: var(--secundary-color);
+  text-shadow: 0 0 0.1em var(--pulse-blue), 0 0 0.1em var(--pulse-blue-shadow),0 0 
+    0.1em var(--pulse-blue-shadow)
+}
+
+.contact {
+  width: 100%;
+  height: 100%;
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact:hover { background-color: var(--card-hover-bg); cursor: pointer; }
+
+.contact .icon { color: var(--card-color); position: relative; font-size: 130px }
+
+.contact h2 {
+  color: var(--card-color);
+  margin-top: 15px;
+  font-size: 21px;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+  user-select: none;
+}
